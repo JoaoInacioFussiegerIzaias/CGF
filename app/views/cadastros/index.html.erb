@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Cadastros" %>
+
+<h1>Cadastros</h1>
+
+<div id="cadastros">
+  <% @cadastros.each do |cadastro| %>
+    <%= render cadastro %>
+    <p>
+      <%= link_to "Show this cadastro", cadastro %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New cadastro", new_cadastro_path %>
